@@ -1,6 +1,7 @@
 import random
 from Color import Colors
-import os, time
+import os
+import time
 
 
 class Character():
