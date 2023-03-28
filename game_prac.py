@@ -6,7 +6,7 @@ import time
 
 class Character():
     mp = 100
-    max_mp = 100
+    max_mp = 101
     new_power = 0
     critical = 0
     defense = 0
