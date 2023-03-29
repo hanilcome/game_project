@@ -6,7 +6,7 @@ import time
 
 class Character():
     mp = 100
-    max_mp = 101
+    max_mp = 100
     new_power = 0
     critical = 0
     defense = 0
@@ -271,6 +271,13 @@ class Monster():
 
     def show_status(self):
         print(f'{Colors.BRIGHT_RED}{self.name}{Colors.RESET}의 상태: {Colors.RED}HP {self.hp}{Colors.RESET}/{self.max_hp}')
+
+
+
+
+
+# ================================================== Main ===========================================================
+
 
 
 while (True):
