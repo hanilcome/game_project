@@ -1,0 +1,132 @@
+import random
+from Color import Colors
+import os
+import time
+import subprocess  # 게임종료 시, 재시작 불러오는 명령
+from game_merge import *
+
+
+# 게임 인트로 시작
+# 오프닝 스토리 시작 [1분 20초 짜리]
+ask_skip = input(
+    "\n\n\n\n\n\n\n\n\n게임이 시작됩니다. 오프닝을 보시겠습니까?\n(y/n)\n\n\n\n\n\n 답변: ")
+
+if ask_skip == "y" or ask_skip == "yes" or ask_skip == "Y":
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n-아빠!!\n\n\n\n\n\n")
+    time.sleep(3)
+    print("\n\n\n\n\n\n\n\n-아빠!!!!!\n\n\n\n\n\n")
+    time.sleep(2.5)
+    print("\n\n\n\n\n\n\n\n초등학교 앞.\n\n\n\n\n\n")
+    time.sleep(1)
+    print("\n\n\n\n\n\n\n\n학교가 끝난 어린이들이 떠드는 소리로 시끌벅적 하다.\n\n\n\n\n\n")
+    time.sleep(2.5)
+    print("\n\n\n\n\n\n\n\n...\n\n\n\n\n\n")
+    time.sleep(2.5)
+    print("\n\n\n\n\n\n\n\n문득 오른 손에 느껴지는 작고 따뜻하고 말랑한 감촉.\n\n\n\n\n\n")
+    time.sleep(3)
+    print("\n\n\n\n\n\n\n\n무언가가 내 오른손을 잡아당긴다. 고개를 돌려본다.\n\n\n\n\n\n")
+    time.sleep(3)
+    print("\n\n\n\n\n\n\n\n말랑한 것의 정체는 바로\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n내 일곱 살 짜리 아들의 고사리 같은 손!!\n\n\n\n\n\n")
+    time.sleep(3)
+    print("\n\n\n\n\n\n\n\n-아빠!! 모해!! 빨랑!!\n\n\n\n\n\n\n\n")
+    time.sleep(2.5)
+    print("\n\n\n아들이 내 손을 바삐 잡아 끌며, 빠르게 인파 속을 헤집고 들어간다.\n\n\n\n\n\n")
+    time.sleep(3.5)
+    print("\n\n\n\n\n\n\n\n나는 어디로 향하는 지도 모르는 채...\n\n\n\n\n\n")
+    time.sleep(3)
+    print("\n\n\n수많은 초딩들의 인파 속으로...\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n. . .\n\n\n\n\n\n")
+    time.sleep(1)
+    print("\n\n\n\n\n\n\n-아빠! 다 왔어!!!\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n-이것 좀 봐봐!! 빨리!!!\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n아들의 손가락이 가리키는 곳에는. . .\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n그것이 있었다. . .\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n바로. . .\n\n\n\n\n\n")
+    time.sleep(3)
+    # 병아리 그림 넣으면 예쁘겠다고 하심 ㅋㅋㅋ
+    print(f"\033[33m\n\n\n\n\n\n\n\n병아리!!\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n            (•᷄ʚ •᷅ )\n\n\n\n\n\n")
+    time.sleep(0.1)
+    print("\n\n\n\n\n\n\n\n            ( •᷄Θ• )\n\n\n\n\n\n")
+    time.sleep(0.1)
+    print("\n\n\n\n\n\n\n\n            ( •᷄ ɞ•᷅)\n\n\n\n\n\n")
+    time.sleep(0.1)
+    print("\n\n\n\n\n\n\n\n            ( •᷄Θ• )\n\n\n\n\n\n")
+    time.sleep(0.1)
+    print("\n\n\n\n\n\n\n\n            (•᷄ʚ •᷅ )\n\n\n\n\n\n\033[0m")
+    time.sleep(3)
+    print("\n\n\n헉...!!!!! 으윽....!!!!!!!!!!!!\n\n\n\n\n\n")
+    time.sleep(3)
+    print("\n\n\n\n\n\n\n\n병아리를 본 나는\n\n\n\n\n\n")
+    time.sleep(1)
+    print("\n\n\n\n\n\n\n\n일순간 너무 귀엽다고 느껴버렸고\n\n\n\n\n\n")
+    time.sleep(1.5)
+    print("\n\n\n\n\n\n\n\n무언가 가슴 속이 엄청 조여오면서\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n그대로 눈 앞이 흐려져 버렸다.\n\n\n\n\n\n")
+    time.sleep(2)
+    print("\n\n\n\n\n\n\n\n의사의 진단차트에는 이렇게 적혔다.\n\n\n\n\n\n")
+    time.sleep(3)
+    print("\n\n\n\n\n\n\n\na 환자의 사인은...\n\n\n\n\n\n")
+    time.sleep(3)
+    print(f"\n\n\n\n\n\n\n\n \033[35m심쿵사♥\033[0m \n\n\n\n\n\n")
+    time.sleep(5)
+
+
+else:
+    print("\n\n\n\n\n\n\n\n오프닝이 스킵되었습니다.\n곧바로 본 게임이 시작됩니다.\n\n\n\n\n")
+    time.sleep(5)
+# 오프닝 스토리 끝
+
+
+# 튜토리얼 시작 [35초 짜리] : 이름 정하기 및 직업 정하기 포함
+# print("========================================================================================")
+# print("본 게임이 시작됩니다.")
+# print("========================================================================================")
+# time.sleep(4)
+# print("\n\n\n\n\n\n\n\n\n\n\n\n\n-이보게!!\n\n\n\n\n\n")
+# time.sleep(4)
+# print("\n\n\n\n\n\n\n\n-이봐!! 이봐!!\n\n\n\n\n\n")
+# time.sleep(3)
+# print("\n\n\n\n\n\n\n\n누군가 나를 흔들어 깨우고 있다.\n\n\n\n\n\n")
+# time.sleep(4)
+# print("\n\n\n\n\n\n\n\n눈을 떠 보니 보이는 것은....\n\n\n\n\n\n")
+# time.sleep(2.5)
+# print("\n\n\n\n\n\n\n\n흡사 소지섭처럼 기른 콧수염과\n\n\n\n\n\n")
+# time.sleep(2)
+# print("\n\n\n\n\n\n\n\n더러운 콧수염 너머....\n\n\n\n\n\n")
+# time.sleep(2)
+# print("\n\n\n\n\n\n\n\n윤기가 나는 파란색 피부....\n\n\n\n\n\n")
+# time.sleep(2)
+# print("\n\n\n\n\n\n\n\n말캉말캉....\n\n\n\n\n\n")
+# time.sleep(1.5)
+# print("\n\n\n\n\n\n\n\n다시 만져봐도\n\n\n\n\n\n")
+# time.sleep(2)
+# print(
+#     f"\n\n\n\n\n\n\n\n\033[96m말캉!\033[0m     \033[36m말캉!\033[0m     \033[96m말캉!\033[0m\n\n\n\n\n\n")
+# time.sleep(2)
+# print(f"\n\n\n\n\n\n\n\n아니 이 사람은 \033[96m슬라임\033[0m?!!?!\n\n\n\n\n\n")
+# time.sleep(4)
+# print("\n\n\n\n\n\n\n\n-예끼 이 사람아!!\n\n\n\n\n\n")
+# time.sleep(2)
+# print(f"\n\n\n\n\n\n\n\n-초면에 얼굴을 만지다니!! 같은 \033[96m슬라임\033[0m끼리!!\n\n\n\n\n\n")
+# time.sleep(2)
+# print("\n\n\n\n\n\n\n\n-에?!!? 같은 슬라임이요?!\n\n\n\n\n\n")
+# time.sleep(3)
+# print("\n\n\n\n\n\n\n\n-그래 이 사람아!! 백주대낮에 풀밭에 쓰러져 있길래 내가 오두막으로 끌고왔지!!\n\n\n\n\n\n")
+# time.sleep(5)
+# print("\n\n\n\n\n\n\n\n-자네 도대체 이름이 뭔가?!\n\n\n\n\n\n")
+# time.sleep(3.5)
+
+
+
+subprocess.call(["python", "game_merge.py"])
